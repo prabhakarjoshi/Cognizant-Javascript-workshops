@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+ 
+<title>
+     JITL - JS Workshop :: Cherry Pick Greeting Messages
+</title>
+ 
+ 
+</head>
+ 
+<body>
+ 
+<h2> Greetings - Output </h2>
+<ul>
+    <li>Happy Birthday!</li>
+    <li>Merry Christmas my love</li>
+    <li>A happy Christmas to all the family</li>
+    <li>You're all I want for Christmas</li>
+    <li>Get well soon</li>
+</ul>
+ 
+</body>
+ 
+<script>
+ 
+    // Get an handle to the Un Ordered List (ul)
+    let ulObj=document.querySelector("ul")
+    // Greeting Array
+    let greetings = ['Happy Birthday!',
+                     'Merry Christmas my love',
+                     'A happy Christmas to all the family',
+                     'You\'re all I want for Christmas',
+                     'Get well soon'];
+    ulObj.innerHTML="";
+    for(let i=0; i < greetings.length; ++i){
+
+        if(greetings[i].includes("Christmas")){
+              // dynamically create li element
+              var li = document.createElement("li");
+              //append greeting to list item
+              li.appendChild(document.createTextNode(greetings[i]));
+              //append the list iem to the ul 
+              ulObj.appendChild(li);
+        }
+    }
+    
+</script>
+</html>
+ 

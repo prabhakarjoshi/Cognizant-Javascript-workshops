@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+ 
+    <title>
+          JS Workshop [03] :: Search - Top 5 Terms
+    </title>
+    
+    <style>
+        .button {
+          border: none;
+          color: white;
+          padding: 8px 24px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+ 
+        .button1 {background-color: #4CAF50;} /* Green */
+        .button2 {background-color: #008CBA;} /* Blue */
+ 
+    </style>
+ 
+</head>
+ 
+<body>
+ 
+    <input type="text" id="searchIn" name="searchIn">&nbsp;
+    <button class="button button1">Search</button>
+    
+    <b><p>Top 5 Search</p></b>
+    <ul></ul>
+ 
+</body>
+ 
+    <script>
+    
+        let searchTerms = [];
+        const MAXTERMS = 5;
+    
+        function updateList(){
+            ulObj.innerHTML=""
+            searchTerms.forEach((term)=>{
+                var li = document.createElement("li");
+                li.appendChild(document.createTextNode(term));
+                ulObj.appendChild(li);
+            })
+        }
+        // Get an handle to the button
+        buttonObj = document.querySelector("button")
+        // Get an handle to the input
+        searchTextObj = document.querySelector('#searchIn');
+        // Get an handle to the Un Ordered List (ul)
+        ulObj = document.querySelector('ul');
+        // Associate an event listner to the button
+        buttonObj.addEventListener('click',()=>{
+            if (searchTerms.length >= MAXTERMS) {
+                searchTerms.shift();
+            }
+            searchTerms.push(searchTextObj.value);
+            updateList()
+        })
+      
+    </script>
+</html>

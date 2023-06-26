@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+        JS Workshop [02] :: Extract Station Code and Name
+    </title>
+    <script>
+        
+        function edit(str){
+            return str.slice(0,3)+":"+str.split(";")[1]
+        }
+        let ulObj =document.querySelector("ul");
+        let n=ulObj.childElementCount
+        let stations=ulObj.children
+        let newStations=[]
+        for(let i=0; i<n;i++){
+        newStations.push(edit(stations[i].innerHTML))
+        }
+        ulObj.innerHTML = '';
+        for(let i=0;i<n;i++)
+        {
+            var li = document.createElement("li");
+            li.appendChild(document.createTextNode(newStations[i]));
+            ulObj.appendChild(li);
+        }
+
+</script>
+</head>
+ 
+<body>
+ 
+     <h2> Station Code and its Name - Output </h2>
+     <ul>
+          <li>MAN675847583748sjt567654;Manchester Piccadilly</li>
+          <li>GNF576746573fhdg4737dh4;Greenfield</li>
+          <li>LIV5hg65hd737456236dch46dg4;Liverpool Lime Street</li>
+          <li>SYB4f65hf75f736463;Stalybridge</li>
+          <li>HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield</li>
+     </ul>
+ 
+</body>
+</html>
+ 
