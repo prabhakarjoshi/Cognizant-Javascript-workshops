@@ -120,36 +120,39 @@
     flex-wrap: wrap;
     width: 50%;
     padding-bottom: 15px;
-    
-    }
-    
-    .input-box:nth-child(2n) {
+}
+
+.input-box:nth-child(2n) {
     justify-content: end;
-    }
-    
-    .input-box label,
-    .gender-title {
+}
+
+.input-box label,
+.gender-title {
     width: 95%;
     color: #fff;
     font-weight: bold;
     margin: 5px 0;
-    }
-    
-    gender-title {
+}
+
+gender-title {
     font-size: 16px;
-    }
-    
-    .input-box input {
+}
+
+.input-box input {
     height: 40px;
     width: 95%;
+    background: #ffffff;
+    border: 1px solid #066185;
     padding: 0 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
     outline: none;
     }
     
     .input-box input:is(:focus, :valid) {
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+    .input-box::placeholder{
+        color: white;
     }
     
     .gender-category label {
@@ -193,7 +196,8 @@
     height: 120px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    /* background: #293B60; */
+    border: 1px solid #066185;
     outline: none;
     resize: vertical;
     }
