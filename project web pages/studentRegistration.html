@@ -1,0 +1,212 @@
+<body>
+    <div class="Container">
+    <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+    <input type="hidden" name="oid" value="00D2w00000Gj2jP" />
+    
+    <input type="hidden" name="retURL" value="http://google.com" />
+    <h2>Personal Details</h2>
+    <div class="content">
+    <div class="input-box">
+    <label for="last_name">Student Name</label>
+    <input placeholder="Enter Name" required id="last_name" maxlength="30"
+    name="last_name" size="20" type="text">
+    </div>
+    <div class="input-box">
+    <label for="email">Student Email</label>
+    <input type="email" placeholder="Enter valid email address" required id="00N2w00000aYgtW" maxlength="80"
+    name="00N2w00000aYgtW" size="20">
+    </div>
+    <div class="input-box">
+    <label for="phone">Phone Number</label>
+    <input type="tel" placeholder="Phone Number" name="phone" required id="00N2w00000aYgtR" name="00N2w00000aYgtR"
+    size="20" type="text" maxlength="10">
+    </div>
+    <div class="input-box">
+    <label for="password">Aadhar Number:</label>
+    <input type="text" placeholder="Enter Aadhar Number" id="00N2w00000aYgtb" name="00N2w00000aYgtb"
+    size="12" maxlength="12">
+    </div>
+    <div class="input-box">
+    <label for="name">College Name</label>
+    <input type="text" placeholder="Enter College name" id="00N2w00000aYgtq" maxlength="40" name="00N2w00000aYgtq"
+    size="20" >
+    </div>
+    <div class="input-box">
+    <label for="name">Course</label>
+    <input type="text" placeholder="Enter Course" id="00N2w00000aYgyN" maxlength="15" name="00N2w00000aYgyN"
+    size="20" >
+    </div>
+    <div class="input-box">
+    <label for="name">Stream</label>
+    <input type="text" placeholder="Enter your Stream" id="00N2w00000aYhKc" maxlength="15" name="00N2w00000aYhKc"
+    size="20" >
+    </div>
+    <div class="input-box">
+    <label for="name">Course Interested</label>
+    <input type="text" placeholder="Course on which you are interested" id="00N2w00000aYhKh" maxlength="20"
+    name="00N2w00000aYhKh" size="20" >
+    </div>
+    
+    </div>
+    <div class="queries-area">
+    <label for="name">Queries</label>
+    <textarea type="text" placeholder="Type your queries here..." id="00N2w00000aYhUr" name="00N2w00000aYhUr"
+    wrap="soft" ></textarea>
+    </div>
+    
+    <div class="button-container">
+    <input id='button' type="submit" name="submit">
+    <!-- <button>Register</button> -->
+    </div>
+    </form>
+    </div>
+    </body>
+    
+    <style>
+    * {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    }
+    
+    body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    padding: 50px 0;
+    background: linear-gradient(#380036, #0CBABA);
+    }
+    
+    .Container {
+    max-width: 750px;
+    padding: 28px;
+    /* margin: 0 28px; */
+    
+    border-radius: 10px;
+    overflow: hidden;
+    background: rgba(41, 41, 41, 0.352);
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.6);
+    }
+    
+    h2 {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: left;
+    color: #fff;
+    padding-bottom: 8px;
+    border-bottom: 1px solid silver;
+    font-family:Georgia;
+    
+    }
+    
+    .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    }
+    
+    .input-box input:focus {
+    /* border-color: rgb(0, 0, 0); */
+    border: 2px solid rgb(0, 106, 198);
+    outline: none;
+    box-shadow: 0 0 3px 3px rgba(16, 15, 15, 0.918);
+    }
+    
+    .input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.input-box:nth-child(2n) {
+    justify-content: end;
+}
+
+.input-box label,
+.gender-title {
+    width: 95%;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+gender-title {
+    font-size: 16px;
+}
+
+.input-box input {
+    height: 40px;
+    width: 95%;
+    background: #ffffff;
+    border: 1px solid #066185;
+    padding: 0 10px;
+    border-radius: 5px;
+    outline: none;
+    }
+    
+    .input-box input:is(:focus, :valid) {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    }
+    .input-box::placeholder{
+        color: white;
+    }
+    
+    .gender-category label {
+    padding: 0 20px 0 5px;
+    font-size: 14px;
+    }
+    
+    .button-container {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+    }
+    
+    .button-container #button {
+    width: 30%;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+    font-size: 20px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #710146, #090461);
+    cursor: pointer;
+    transition: 0.3s;
+    }
+    
+    .button-container #button:hover {
+    background: linear-gradient(to right, #61045f, #aa076b);
+    }
+    
+    
+    .queries-area label {
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+    }
+    
+    .queries-area textarea {
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+    border-radius: 5px;
+    /* background: #293B60; */
+    border: 1px solid #066185;
+    outline: none;
+    resize: vertical;
+    }
+    
+    .queries-area textarea:focus {
+    border-color: rgb(0, 106, 198);
+    box-shadow: 0 0 1px 1px rgba(16, 15, 15, 0.918);
+    }
+    </style>
+    
+    </html>
+    
